@@ -20,6 +20,7 @@
 <p>
 <%= link_to "<< Back to Articles List", articles_path %>
 </p>
+<% if logged_in? %>
 <p>
 <%= link_to "delete", article_path(@article),method: :delete , data: {confirm: "Really delete the article?"}%>
 </p>
@@ -27,3 +28,4 @@
 <%= link_to "edit", edit_article_path(
 	@article) %>
 </p>
+<%end%>
